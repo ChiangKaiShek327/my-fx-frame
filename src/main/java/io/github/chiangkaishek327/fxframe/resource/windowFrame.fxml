@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.chiangkaishek327.animatedfx.AnimatedButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPaneAll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+   minWidth="-Infinity" prefHeight="568.0" prefWidth="885.0" styleClass="background"
+   xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="io.github.chiangkaishek327.fxframe.control.WindowFrameController">
+   <top>
+      <BorderPane fx:id="BorderPaneControl" prefHeight="37.0" prefWidth="885.0"
+         BorderPane.alignment="CENTER">
+         <right>
+            <HBox fx:id="HBoxButtons" prefHeight="37.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnimatedButton id="button-options" fx:id="ButtonOptions"
+                     styleClass="button-windowframe-control" text=" ">
+                     <graphic>
+                        <StackPane id="icon-options" prefHeight="15.0" prefWidth="17.0"
+                           styleClass="icon" />
+                     </graphic>
+                  </AnimatedButton>
+                  <AnimatedButton id="button-minium" fx:id="ButtonMin" prefWidth="30.0"
+                     styleClass="button-windowframe-control" text=" ">
+                     <graphic>
+                        <StackPane id="icon-minimize" prefHeight="2.0" prefWidth="17.0"
+                           styleClass="icon" />
+                     </graphic>
+                  </AnimatedButton>
+                  <AnimatedButton id="button-maxium" fx:id="ButtonMax" prefWidth="30.0"
+                     styleClass="button-windowframe-control" text=" ">
+                     <graphic>
+                        <StackPane id="icon-maximize" prefHeight="15.0" prefWidth="15.0"
+                           styleClass="icon" />
+                     </graphic>
+                  </AnimatedButton>
+                  <AnimatedButton id="button-close" fx:id="ButtonClose" prefWidth="30.0"
+                     styleClass="button-windowframe-control" text="  ">
+                     <graphic>
+                        <StackPane id="icon-close" prefHeight="15.0" prefWidth="15.0"
+                           styleClass="icon" />
+                     </graphic>
+                  </AnimatedButton>
+
+               </children>
+            </HBox>
+         </right>
+         <left>
+            <Label fx:id="LabelTitle" style="-fx-padding: 0 0 0 10;" text="NULL"
+               BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </left>
+      </BorderPane>
+   </top>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@window-frame.css" />
+   </stylesheets>
+
+</BorderPane>
