@@ -8,7 +8,7 @@
 .background {
     -fx-background-radius: 10;
     -fx--fx-border-radius: 10;
-    -fx-background-color: #113;
+    -fx-background-color: #111;
 }
 
 .label {
@@ -20,13 +20,13 @@
 .button {
     -fx-font-family: "Bitter Pro Light";
     -fx-background-radius: 3;
-    -fx-background-color: #335;
+    -fx-background-color: #333;
     -fx-text-fill: #fff;
     -fx-cursor: hand;
 }
 
 .button:hover {
-    -fx-background-color: #77f;
+    -fx-background-color: #777;
 }
 
 .button :armed {
@@ -46,13 +46,13 @@
     -fx-border-radius: 10;
     -fx-border-insets: 3;
     -fx-background-insets: 3;
-    -fx-background-color: #224;
-    -fx-border-color: #77f;
+    -fx-background-color: #222;
+    -fx-border-color: #777;
 }
 
 .detail-area {
     -fx-background-color: #000;
-    -fx-text-fill: #88f;
+    -fx-text-fill: #888;
 }
 
 .icon {
@@ -60,21 +60,21 @@
 }
 
 .combo-box {
-    -fx-background-color: #335;
+    -fx-background-color: #333;
     -fx-text-fill: #fff;
 }
 
 .combo-box :hover {
-    -fx-background-color: #77f;
+    -fx-background-color: #777;
 }
 
 .combo-box .combo-box-popup .list-view {
-    -fx-background-color: #446;
+    -fx-background-color: #444;
 
 }
 
 .combo-box .combo-box-popup .list-view .list-cell {
-    -fx-text-fill: #88f;
+    -fx-text-fill: #888;
 
 }
 

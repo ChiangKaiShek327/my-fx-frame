@@ -1,6 +1,9 @@
 package io.github.chiangkaishek327.fxframe.control;
 
+import javax.management.RuntimeErrorException;
+
 import io.github.chiangkaishek327.animatedfx.AnimatedButton;
+import io.github.chiangkaishek327.animatedfx.AnimatedPane;
 import io.github.chiangkaishek327.fxframe.Controller;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.BooleanProperty;
@@ -8,7 +11,6 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -17,16 +19,18 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import javafx.util.Duration;
 
 public class WindowFrameController implements Controller {
     @FXML
-    private BorderPane BorderPaneAll, BorderPaneControl;
+    private AnimatedPane BorderPaneAll;
+    @FXML
+    private BorderPane BorderPaneControl;
 
     @FXML
     private AnimatedButton ButtonClose, ButtonMax, ButtonMin, ButtonOptions;
@@ -101,7 +105,7 @@ public class WindowFrameController implements Controller {
                         .setValue(ResizeVerticalProperty.getValue() && ResizeLeftHortonizalProperty.getValue());
 
             } catch (Exception ex) {
-
+                throw new RuntimeException(ex);
             }
 
         });
@@ -122,6 +126,7 @@ public class WindowFrameController implements Controller {
                 thisWindow.setHeight(e.getScreenY() - thisWindow.getY() + negativeMouseSenceY);
             }
         });
+
     }
 
     @Override
@@ -158,8 +163,10 @@ public class WindowFrameController implements Controller {
         {
             titleProperty = LabelTitle.textProperty();
 
-            for (Button button : new Button[] { ButtonClose, ButtonMax, ButtonMin, ButtonOptions }) {
+            for (AnimatedButton button : new AnimatedButton[] { ButtonClose, ButtonMax, ButtonMin, ButtonOptions }) {
                 button.setFocusTraversable(false);
+                button.setTranslateAnimationRange(-3);
+
             }
         }
         {
@@ -181,7 +188,7 @@ public class WindowFrameController implements Controller {
                 thisWindow.setOpacity(1);
             });
         }
-
+        BorderPaneAll.setAnimationLength(Duration.seconds(1));
         AnimationTimer ut = new AnimationTimer() {
 
             @Override

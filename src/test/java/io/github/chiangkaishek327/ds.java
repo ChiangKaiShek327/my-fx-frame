@@ -26,6 +26,7 @@ public class ds extends Application {
         BorderPane borderPane = new BorderPane(new Label("HELLO"));
         borderPane.getCenter().setStyle("-fx-font-size:50 ;-fx-text-fill: #00f;");
         frame.setFrameScene(new Scene(borderPane));
+        frame.setStylesheet(Frame.STYLE_LIGHT);
         frame.show();
     }
 

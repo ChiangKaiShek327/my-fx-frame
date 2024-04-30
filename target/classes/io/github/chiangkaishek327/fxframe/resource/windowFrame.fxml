@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.chiangkaishek327.animatedfx.AnimatedButton?>
+
+<?import io.github.chiangkaishek327.animatedfx.AnimatedPane?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
@@ -8,7 +10,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPaneAll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+<AnimatedPane fx:id="BorderPaneAll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
    minWidth="-Infinity" prefHeight="568.0" prefWidth="885.0" styleClass="background"
    xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
    fx:controller="io.github.chiangkaishek327.fxframe.control.WindowFrameController">
@@ -61,8 +63,7 @@
       </BorderPane>
    </top>
    <stylesheets>
-      <URL value="@style.css" />
-      <URL value="@window-frame.css" />
+      <URL value="@css-styles/window-frame.css" />
    </stylesheets>
 
-</BorderPane>
+</AnimatedPane>
