@@ -31,7 +31,7 @@ public class WindowFrameController implements Controller {
     @FXML
     private StackPane StackPaneBg;
     @FXML
-    private AnimatedPane BorderPaneAll;
+    private BorderPane BorderPaneAll;
     @FXML
     private BorderPane BorderPaneControl;
 
@@ -191,7 +191,6 @@ public class WindowFrameController implements Controller {
                 thisWindow.setOpacity(1);
             });
         }
-        BorderPaneAll.setAnimationLength(Duration.seconds(1));
         AnimationTimer ut = new AnimationTimer() {
 
             @Override
