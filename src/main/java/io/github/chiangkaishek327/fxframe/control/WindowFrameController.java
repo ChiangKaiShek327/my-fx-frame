@@ -22,11 +22,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.Duration;
 
 public class WindowFrameController implements Controller {
+    @FXML
+    private StackPane StackPaneBg;
     @FXML
     private AnimatedPane BorderPaneAll;
     @FXML
@@ -60,7 +63,7 @@ public class WindowFrameController implements Controller {
 
     @Override
     public Parent getAll() {
-        return BorderPaneAll;
+        return StackPaneBg;
 
     }
 

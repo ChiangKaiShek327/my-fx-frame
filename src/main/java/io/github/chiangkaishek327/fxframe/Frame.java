@@ -28,8 +28,9 @@ public class Frame extends Stage {
     ObjectProperty<Duration> showingAnimationLengthProperty = new SimpleObjectProperty<>(Duration.seconds(0.2));
     Parent parent;
     Scene scene;
-    public static final URL STYLE_DARK = Frame.class.getResource("resource/css-styles/dark/style.css"),
-            STYLE_LIGHT = Frame.class.getResource("resource/css-styles/light/style.css");
+    public static final URL STYLE_DARK = Frame.class.getClassLoader()
+            .getResource("resource/css-styles/dark/style.css"),
+            STYLE_LIGHT = Frame.class.getClassLoader().getResource("resource/css-styles/light/style.css");
 
     public Frame() throws IOException {
         thisWindowFrameController = (WindowFrameController) FXMLLoaderPP
@@ -43,9 +44,9 @@ public class Frame extends Stage {
 
         styleProperty.addListener((ob, o, n) -> {
             if (o != null && n != null) {
-                scene.getStylesheets().remove(o.toString());
+                scene.getStylesheets().remove(o.toExternalForm());
 
-                scene.getStylesheets().add(n.toString());
+                scene.getStylesheets().add(n.toExternalForm());
             }
         });
         styleProperty.setValue(STYLE_DARK);
