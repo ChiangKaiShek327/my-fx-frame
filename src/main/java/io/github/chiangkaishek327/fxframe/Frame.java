@@ -2,10 +2,6 @@ package io.github.chiangkaishek327.fxframe;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-
-import io.github.chiangkaishek327.animatedfx.AnimatedPane;
-import io.github.chiangkaishek327.animatedfx.AnimatedPane.MoveDirection;
 import io.github.chiangkaishek327.fxframe.control.WindowFrameController;
 import javafx.animation.FadeTransition;
 import javafx.beans.property.ObjectProperty;

@@ -2,8 +2,8 @@ package io.github.chiangkaishek327.fxframe.control;
 
 import javax.management.RuntimeErrorException;
 
-import io.github.chiangkaishek327.animatedfx.AnimatedButton;
-import io.github.chiangkaishek327.animatedfx.AnimatedPane;
+import io.github.chiangkaishek327.animated.control.button.AnimatedButton;
+import io.github.chiangkaishek327.animated.control.button.ButtonAnimationGroup.ButtonAnimationType;
 import io.github.chiangkaishek327.fxframe.Controller;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.BooleanProperty;
@@ -25,7 +25,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import javafx.util.Duration;
 
 public class WindowFrameController implements Controller {
     @FXML
@@ -168,7 +167,8 @@ public class WindowFrameController implements Controller {
 
             for (AnimatedButton button : new AnimatedButton[] { ButtonClose, ButtonMax, ButtonMin, ButtonOptions }) {
                 button.setFocusTraversable(false);
-                button.setTranslateAnimationRange(-3);
+                button.setAnimationType(ButtonAnimationType.BAT_TRANSLATE);
+                button.setChangeScale(-3);
 
             }
         }
@@ -264,5 +264,13 @@ public class WindowFrameController implements Controller {
 
     public void setBorderWidth(double borderWidth) {
         borderWidthProperty.setValue(borderWidth);
+    }
+
+    public void setTop(Node top) {
+        BorderPaneAll.setTop(top);
+    }
+
+    public Node getTop() {
+        return BorderPaneAll.getTop();
     }
 }
