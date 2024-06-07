@@ -2,10 +2,15 @@
     -fx-pref-height: 25;
 }
 
+.button-windowframe-control:hover {
+    -fx-background-insets: -3 0 0 0;
+}
+
 #button-close {
     -fx-background-radius: 0 9 0 0;
 
 }
+
 
 #button-maxium {
     -fx-background-radius: 0;

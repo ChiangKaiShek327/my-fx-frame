@@ -6,7 +6,7 @@
 
     <groupId>io.github.chiangkaishek327</groupId>
     <artifactId>my-fx-frame</artifactId>
-    <version>1.4</version>
+    <version>1.41</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -72,5 +72,15 @@
                 <version>3.0.0-M8</version>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java/io/github/chiangkaishek327/fxframe</directory>
+                <includes>
+                    <include>resource/*.*</include>
+                    <include>resource/**/*.*</include>
+                </includes>
+                <targetPath>/io/github/chiangkaishek327/fxframe</targetPath>
+            </resource>
+        </resources>
     </build>
 </project>
