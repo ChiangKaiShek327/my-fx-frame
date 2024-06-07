@@ -16,7 +16,7 @@ import javafx.util.Duration;
 
 public class Frame extends Stage {
     static {
-        Font.loadFont(Frame.class.getResourceAsStream("resource/BitterPro-Light.ttf"), 15);
+        Font.loadFont(Frame.class.getResourceAsStream("resource/NotoSansTC-Light.otf"), 15);
     }
 
     WindowFrameController thisWindowFrameController;

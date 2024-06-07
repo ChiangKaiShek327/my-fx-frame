@@ -7,14 +7,50 @@
     <groupId>io.github.chiangkaishek327</groupId>
     <artifactId>my-fx-frame</artifactId>
     <version>1.41</version>
+    <name>${project.groupId}:${project.artifactId}</name>
 
+    <url>https://github.com/ChiangKaiShek327/my-fx-frame</url>
+    <description>ass </description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>
+                https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
+            </url>
+        </repository>
+    </distributionManagement>
+    <scm>
+        <tag>main</tag>
+        <url>https://github.com/chiangkaishek327/animated-fx</url>
+        <connection>scm:https://github.com/chiangkaishek327/animated-fx.git</connection>
+    </scm>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://mit-license.org/</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>chiangkaishek</id>
+            <name>chiang kai shek</name>
+            <email>chiangkaishek327@gmail.com</email>
 
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -71,7 +107,58 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M8</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <additionalJOptions>
+                        <additionalJOption>
+                            -J-Duser.language=US
+                        </additionalJOption>
+                        <additionalJOption>
+                            -J-Duser.language=en
+                        </additionalJOption>
+                    </additionalJOptions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+
         <resources>
             <resource>
                 <directory>src/main/java/io/github/chiangkaishek327/fxframe</directory>

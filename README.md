@@ -1,3 +1,12 @@
-for myself.
+```
+<dependency>
+    <groupId>io.github.chiangkaishek327</groupId>
+    <artifactId>my-fx-frame</artifactId>
+    <version>1.41</version>
+</dependency>
+```
+NOW, YOU CAN MAYEN IT!
 
-if you wanna use it, compile and install yourself
+a beautiful (undefinable) window frame
+
+not document temporary
