@@ -1,9 +1,9 @@
 package io.github.chiangkaishek327.fxframe.control;
 
-import javax.management.RuntimeErrorException;
-
 import io.github.chiangkaishek327.animated.control.button.AnimatedButton;
 import io.github.chiangkaishek327.animated.control.button.ButtonAnimationGroup.ButtonAnimationType;
+import io.github.chiangkaishek327.animated.control.pane.AnimatedPane;
+import io.github.chiangkaishek327.animated.control.pane.PaneAnimationGroup.PaneAnimationDirection;
 import io.github.chiangkaishek327.fxframe.Controller;
 import javafx.animation.AnimationTimer;
 import javafx.beans.property.BooleanProperty;
@@ -22,7 +22,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -40,7 +39,7 @@ public class WindowFrameController implements Controller {
 
     @FXML
     private HBox HBoxButtons;
-
+    private AnimatedPane contentAnimatedPane = new AnimatedPane();
     @FXML
     private Label LabelTitle;
     private Window thisWindow;
@@ -108,7 +107,6 @@ public class WindowFrameController implements Controller {
                         .setValue(ResizeVerticalProperty.getValue() && ResizeLeftHortonizalProperty.getValue());
 
             } catch (Exception ex) {
-                throw new RuntimeException(ex);
             }
 
         });
@@ -142,7 +140,11 @@ public class WindowFrameController implements Controller {
     }
 
     public void setGraphic(Node node) {
-        BorderPaneAll.setCenter(node);
+        contentAnimatedPane.show(node);
+    }
+
+    public void setGraphic(Node node, PaneAnimationDirection direction) {
+        contentAnimatedPane.show(direction, node);
     }
 
     public void setTitle(String title) {
@@ -192,6 +194,7 @@ public class WindowFrameController implements Controller {
                 thisWindow.setOpacity(1);
             });
         }
+        BorderPaneAll.setCenter(contentAnimatedPane);
         AnimationTimer ut = new AnimationTimer() {
 
             @Override
@@ -268,7 +271,7 @@ public class WindowFrameController implements Controller {
     }
 
     public void setTop(Node top) {
-        BorderPaneAll.setTop(top);
+        BorderPaneControl.setCenter(top);
     }
 
     public Node getTop() {

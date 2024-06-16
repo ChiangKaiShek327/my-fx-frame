@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../../../../../main/java/io/github/chiangkaishek327/fxframe/resource/css-styles/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.chiangkaishek327.TL">
+   <bottom>
+      <Slider BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Slider orientation="VERTICAL" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <TableView fx:id="tv" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tc" prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="tc1" prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </center>
+   <right>
+      <ScrollBar orientation="VERTICAL" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

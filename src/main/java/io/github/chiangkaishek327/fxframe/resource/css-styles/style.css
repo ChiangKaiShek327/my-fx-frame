@@ -1,0 +1,188 @@
+* {
+
+
+    -fx-font-family: "Noto Serif TC Light";
+    -clrb: #000;
+    -clrw: #fff;
+    -clr0: #111;
+    -clr1: #222;
+    -clr2: #333;
+    -clr3: #444;
+    -clr4: #555;
+    -clr5: #666;
+    -clr6: #777;
+    -clr7: #888;
+}
+
+.background {
+    -fx-background-radius: 10;
+    -fx--fx-border-radius: 10;
+    -fx-background-color: -clr0;
+}
+
+.label {
+
+    -fx-text-fill: -clrw;
+
+}
+
+.button {
+    -fx-background-radius: 3;
+    -fx-background-color: -clr2;
+    -fx-text-fill: -clrw;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: -clr5;
+}
+
+.button :armed {
+    -fx-border-insets: 0;
+}
+
+.tooltip {
+    -fx-background-radius: 0 6 6 6;
+    -fx-opacity: 70%;
+    -fx-font-size: 15;
+    -fx-background-color: -clrb;
+
+}
+
+.control-pane {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-insets: 3;
+    -fx-background-insets: 3;
+    -fx-background-color: -clr1;
+    -fx-border-color: -clr6;
+}
+
+.detail-area {
+    -fx-background-color: -clrb;
+    -fx-text-fill: -clr7;
+}
+
+.icon {
+    -fx-background-color: -clrw;
+}
+
+.combo-box {
+    -fx-background-color: -clr2;
+    -fx-text-fill: -clrw;
+}
+
+.combo-box :hover {
+    -fx-background-color: -clr6;
+}
+
+.combo-box .combo-box-popup .list-view {
+    -fx-background-color: -clr3;
+
+}
+
+.combo-box .combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #888;
+
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: -clrw;
+    -fx-shape: "M104.727552 457.69728l54.30272 0c14.994432 0 27.15136 12.157952 27.15136 27.15136l0 54.303744c0 14.994432-12.156928 27.15136-27.15136 27.15136l-54.30272 0c-14.994432 0-27.15136-12.156928-27.15136-27.15136L77.576192 484.84864C77.576192 469.854208 89.73312 457.69728 104.727552 457.69728zM349.090816 484.84864l570.181632 0c14.994432 0 27.15136 12.157952 27.15136 27.15136s-12.156928 27.152384-27.15136 27.152384l-570.181632 0c-14.994432 0-27.15136-12.157952-27.15136-27.152384S334.097408 484.84864 349.090816 484.84864zM104.727552 674.909184l54.30272 0c14.994432 0 27.15136 12.156928 27.15136 27.152384l0 54.30272c0 14.994432-12.156928 27.15136-27.15136 27.15136l-54.30272 0c-14.994432 0-27.15136-12.156928-27.15136-27.15136l0-54.30272C77.576192 687.066112 89.73312 674.909184 104.727552 674.909184zM349.090816 702.060544l570.181632 0c14.994432 0 27.15136 12.156928 27.15136 27.15136s-12.156928 27.152384-27.15136 27.152384l-570.181632 0c-14.994432 0-27.15136-12.157952-27.15136-27.152384S334.097408 702.060544 349.090816 702.060544zM104.727552 240.485376l54.30272 0c14.994432 0 27.15136 12.157952 27.15136 27.15136l0 54.30272c0 14.994432-12.156928 27.15136-27.15136 27.15136l-54.30272 0c-14.994432 0-27.15136-12.156928-27.15136-27.15136l0-54.30272C77.576192 252.642304 89.73312 240.485376 104.727552 240.485376zM349.090816 267.636736l570.181632 0c14.994432 0 27.15136 12.157952 27.15136 27.15136 0 14.994432-12.156928 27.15136-27.15136 27.15136l-570.181632 0c-14.994432 0-27.15136-12.156928-27.15136-27.15136C321.939456 279.793664 334.097408 267.636736 349.090816 267.636736z";
+}
+
+.animated-tab-pane {
+    -fx-background-color: -clrb0;
+    -fs-background-radius: 10
+}
+
+.animated-tab-pane .animated-tab-pane-header {
+    -fx-background-color: -clrb0;
+}
+
+.animated-tab-pane .animated-tab-pane-content {
+    -fx-background-color: -clr3;
+}
+
+.animated-tab-header {
+    -fx-background-color: -clrb0;
+}
+
+.animated-tab-header:hover {
+    -fx-background-color: -clr2;
+}
+
+.animated-tab-header:selected {
+    -fx-background-color: -clr3;
+    -fx-background-insets: 0 0 -10 0;
+}
+
+.table-view {
+    -fx-background-color: -clr2;
+    ;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -clrb0;
+}
+
+.table-view .column-header {
+    -fx-background-color: -clr2;
+}
+
+.table-row-cell {
+    -fx-background-color: -clr1;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -clr3;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: -clr4;
+}
+
+.table-cell {
+    -fx-text-fill: -clrw;
+    -fx-border-width: 0;
+}
+
+.table-view .column-header-background,
+.table-view .column-header-background .filler,
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: -clrb0;
+}
+
+.scroll-bar .track {
+    -fx-background-color: -clrb0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -clr5;
+}
+
+.decrement-button,
+.increment-button {
+    -fx-background-color: -clrb0;
+}
+
+.decrement-button.decrement-arrow,
+.increment-button.increment-arrow {
+    -fx-background-color: -clr3;
+}
+
+.separator .line {
+    -fx-background-color: -clr23;
+}
+
+.slider .track {
+    -fx-background-color: -clr3;
+}
+
+.slider .thumb {
+    -fx-background-color: -clr5;
+}

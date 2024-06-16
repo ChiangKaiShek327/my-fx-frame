@@ -63,7 +63,7 @@
          </top>
          <stylesheets>
             <URL value="@css-styles/window-frame.css" />
-            <URL value="@css-styles/dark/style.css" />
+            <URL value="@css-styles/style.css" />
          </stylesheets>
       </BorderPane>
    </children>

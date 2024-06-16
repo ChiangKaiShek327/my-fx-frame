@@ -1,10 +1,17 @@
 package io.github.chiangkaishek327;
 
+import io.github.chiangkaishek327.animated.control.tabpane.AnimatedTab;
+import io.github.chiangkaishek327.animated.control.tabpane.AnimatedTabPane;
 import io.github.chiangkaishek327.fxframe.Frame;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class ds extends Application {
@@ -23,10 +30,16 @@ public class ds extends Application {
             System.exit(0);
         });
         ;
-        BorderPane borderPane = new BorderPane(new Label("HELLO"));
-        borderPane.getCenter().setStyle("-fx-font-size:50 ;-fx-text-fill: #00f;");
-        frame.setFrameScene(new Scene(borderPane));
-        frame.setStylesheet(Frame.STYLE_LIGHT);
+        AnimatedTabPane atp = new AnimatedTabPane();
+        atp.getTabs().add(new AnimatedTab("wdnkjlnkjlnkl", new BorderPane()));
+        atp.getTabs().add(new AnimatedTab("wdnkjlnkjlnkl", new BorderPane()));
+        atp.getTabs().add(new AnimatedTab("wdnkjlnkjlnkl", new BorderPane()));
+        FXMLLoader f = new FXMLLoader(ds.class.getResource("text.fxml"));
+        f.setBuilderFactory(new JavaFXBuilderFactory());
+        f.load();
+        frame.getWindowFrameController().setGraphic(f.getRoot());
+
+        frame.getWindowFrameController().setTop(new Button());
         frame.show();
     }
 
