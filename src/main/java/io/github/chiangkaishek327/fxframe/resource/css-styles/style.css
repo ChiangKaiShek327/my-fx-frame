@@ -2,6 +2,7 @@
 
 
     -fx-font-family: "Noto Serif TC Light";
+    -clrn: #0000;
     -clrb: #000;
     -clrw: #fff;
     -clr0: #111;
@@ -82,7 +83,7 @@
 }
 
 .combo-box .combo-box-popup .list-view .list-cell {
-    -fx-text-fill: #888;
+    -fx-text-fill: -clr7;
 
 }
 
@@ -92,20 +93,21 @@
 }
 
 .animated-tab-pane {
-    -fx-background-color: -clrb0;
+    -fx-background-color: -clrn;
     -fs-background-radius: 10
 }
 
 .animated-tab-pane .animated-tab-pane-header {
-    -fx-background-color: -clrb0;
+    -fx-background-color: -clrn;
 }
 
 .animated-tab-pane .animated-tab-pane-content {
     -fx-background-color: -clr3;
+    -fx-background-radius: 10;
 }
 
 .animated-tab-header {
-    -fx-background-color: -clrb0;
+    -fx-background-color: -clrn;
 }
 
 .animated-tab-header:hover {
@@ -123,7 +125,7 @@
 }
 
 .table-view .column-header-background {
-    -fx-background-color: -clrb0;
+    -fx-background-color: -clrn;
 }
 
 .table-view .column-header {
@@ -154,11 +156,11 @@
 }
 
 .scroll-bar {
-    -fx-background-color: -clrb0;
+    -fx-background-color: -clrn;
 }
 
 .scroll-bar .track {
-    -fx-background-color: -clrb0;
+    -fx-background-color: -clrn;
 }
 
 .scroll-bar .thumb {
@@ -167,7 +169,7 @@
 
 .decrement-button,
 .increment-button {
-    -fx-background-color: -clrb0;
+    -fx-background-color: -clrn;
 }
 
 .decrement-button.decrement-arrow,
@@ -185,4 +187,8 @@
 
 .slider .thumb {
     -fx-background-color: -clr5;
+}
+
+.tips {
+    -fx-font-size: 30;
 }
