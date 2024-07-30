@@ -6,7 +6,7 @@
 
     <groupId>io.github.chiangkaishek327</groupId>
     <artifactId>my-fx-frame</artifactId>
-    <version>1.6</version>
+    <version>1.62</version>
     <name>${project.groupId}:${project.artifactId}</name>
 
     <url>https://github.com/ChiangKaiShek327/my-fx-frame</url>

@@ -12,6 +12,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -21,18 +23,10 @@ public class wewq extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Frame frame = new Frame();
-
-        frame.getWindowFrameController().setTop(new Button());
-        AnimatedLabel a = new AnimatedLabel();
-        HBox hBox = new HBox(a);
-        hBox.setAlignment(Pos.CENTER);
-        frame.getWindowFrameController().setGraphic(hBox);
-        new Thread(() -> {
-            while (true) {
-                OtherUtil.delayConviently(1000);
-                Platform.runLater(() -> a.setText(String.valueOf(Math.random())));
-            }
-        }).start();
+        frame.getWindowFrameController().setTitle("XI JIN PING");
+        frame.getWindowFrameController().setTop(new Button("RAISE YOUR HAND UP IF YOU DON'T AGREE"));
+        frame.getWindowFrameController()
+                .setGraphic(new ImageView(new Image(getClass().getResourceAsStream("xijinping.png"))));
         frame.show();
     }
 
