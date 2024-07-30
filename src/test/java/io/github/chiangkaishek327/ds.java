@@ -1,17 +1,14 @@
 package io.github.chiangkaishek327;
 
+import io.github.chiangkaishek327.animated.control.pane.PaneAnimationGroup.PaneAnimationDirection;
 import io.github.chiangkaishek327.animated.control.tabpane.AnimatedTab;
 import io.github.chiangkaishek327.animated.control.tabpane.AnimatedTabPane;
 import io.github.chiangkaishek327.fxframe.Frame;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class ds extends Application {

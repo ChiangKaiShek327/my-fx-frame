@@ -277,4 +277,8 @@ public class WindowFrameController implements Controller {
     public Node getTop() {
         return BorderPaneAll.getTop();
     }
+
+    public AnimatedPane getContentAnimatedPane() {
+        return contentAnimatedPane;
+    }
 }
